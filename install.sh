@@ -87,6 +87,12 @@ sed -i '/#net.ipv4.ip_forward=1/c\
 net.ipv4.ip_forward=1' /etc/sysctl.conf
 sudo sysctl -p
 
+
+sed -i '/#net.ipv6.conf.all.forwarding=1/c\
+net.ipv6.conf.all.forwarding=1' /etc/sysctl.conf
+sudo sysctl -p
+
+
 # Write script to allow openvpn through firewall on boot using the template .txt file
 sed 's/LOCALIP/'$LOCALIP'/' </home/pi/OpenVPN-Setup/firewall-openvpn-rules.txt >/etc/firewall-openvpn-rules.sh
 sudo chmod 700 /etc/firewall-openvpn-rules.sh
