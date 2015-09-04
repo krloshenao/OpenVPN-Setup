@@ -88,9 +88,9 @@ net.ipv4.ip_forward=1' /etc/sysctl.conf
 sudo sysctl -p
 
 
-sed -i '/#net.ipv6.conf.all.forwarding=1/c\
-net.ipv6.conf.all.forwarding=1' /etc/sysctl.conf
-sudo sysctl -p
+#sed -i '/#net.ipv6.conf.all.forwarding=1/c\
+#net.ipv6.conf.all.forwarding=1' /etc/sysctl.conf
+#sudo sysctl -p
 
 
 # Write script to allow openvpn through firewall on boot using the template .txt file
